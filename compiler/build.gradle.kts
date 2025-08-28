@@ -11,7 +11,7 @@ kotlin {
 }
 
 mavenPublishing {
-  coordinates(groupId = "land.sungbin", artifactId = "kotlin-dumper", version = "0.1.2")
+  coordinates(groupId = "land.sungbin", artifactId = "kotlin-dumper", version = "0.1.6")
 }
 
 dependencies {

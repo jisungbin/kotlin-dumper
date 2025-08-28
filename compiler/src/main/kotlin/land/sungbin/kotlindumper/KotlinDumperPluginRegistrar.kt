@@ -22,15 +22,15 @@ class KotlinDumperPluginRegistrar : ComponentRegistrar {
     configuration.messageCollector.report(CompilerMessageSeverity.INFO, "Hi. This is messageCollector info.")
     configuration.messageCollector.report(CompilerMessageSeverity.WARNING, "Hi. This is messageCollector warn.")
 
-    val coordinator = WorkStealingDumpCoordinator()
-
-    project.extensionArea
-      .getExtensionPoint(IrGenerationExtension.extensionPointName)
-      .registerExtension(IrDumpExtension(coordinator), LoadingOrder.LAST, project)
+    val coordinator = WorkStealingDumpCoordinator(configuration.messageCollector)
 
     project.extensionArea
       .getExtensionPoint(FirExtensionRegistrarAdapter.extensionPointName)
       .registerExtension(FirDumpExtension(coordinator), LoadingOrder.LAST, project)
+
+    project.extensionArea
+      .getExtensionPoint(IrGenerationExtension.extensionPointName)
+      .registerExtension(IrDumpExtension(coordinator), LoadingOrder.LAST, project)
   }
 
   companion object {

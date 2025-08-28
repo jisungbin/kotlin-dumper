@@ -12,6 +12,7 @@ import org.jetbrains.kotlin.fir.analysis.extensions.FirAdditionalCheckersExtensi
 import org.jetbrains.kotlin.fir.declarations.FirFile
 import org.jetbrains.kotlin.fir.extensions.FirExtensionRegistrar
 import org.jetbrains.kotlin.fir.packageFqName
+import org.jetbrains.kotlin.fir.render
 import org.jetbrains.kotlin.fir.renderWithType
 import org.jetbrains.kotlin.psi
 
@@ -41,7 +42,7 @@ class FirDumpExtension(private val coordinator: WorkStealingDumpCoordinator) : F
             val pkgPath = declaration.packageFqName.asString().replace('.', '/')
             File(PATH, "$pkgPath/${deriveBaseName(declaration)}")
           },
-          firString = { declaration.renderWithType() },
+          firString = { declaration.render() },
         )
       }
     }
