@@ -1,5 +1,5 @@
 plugins {
-  kotlin("jvm") version "2.2.10"
+  kotlin("jvm") version "2.2.20"
   id("com.vanniktech.maven.publish") version "0.34.0"
 }
 
@@ -15,7 +15,7 @@ mavenPublishing {
 }
 
 dependencies {
-  compileOnly(kotlin("stdlib", version = "2.2.10"))
-  compileOnly(kotlin("compiler-embeddable", version = "2.2.10"))
-  compileOnly(kotlin("compose-compiler-plugin-embeddable", version = "2.2.10")) // because("IrElement.dumpSrc()")
+  compileOnly(kotlin("stdlib", version = "2.2.20"))
+  compileOnly(kotlin("compiler-embeddable", version = "2.2.20"))
+  compileOnly(kotlin("compose-compiler-plugin-embeddable", version = "2.2.20")) // because("IrElement.dumpSrc()")
 }
