@@ -24,9 +24,9 @@ class KotlinDumperPluginRegistrar : ComponentRegistrar {
 
     val coordinator = WorkStealingDumpCoordinator(configuration.messageCollector)
 
-    project.extensionArea
-      .getExtensionPoint(FirExtensionRegistrarAdapter.extensionPointName)
-      .registerExtension(FirDumpExtension(coordinator), LoadingOrder.LAST, project)
+//    project.extensionArea
+//      .getExtensionPoint(FirExtensionRegistrarAdapter.extensionPointName)
+//      .registerExtension(FirDumpExtension(coordinator), LoadingOrder.LAST, project)
 
     project.extensionArea
       .getExtensionPoint(IrGenerationExtension.extensionPointName)
@@ -34,6 +34,6 @@ class KotlinDumperPluginRegistrar : ComponentRegistrar {
   }
 
   companion object {
-    const val PATH = "/Users/jisungbin/StudioProjects/unni-android/domain/home/kotlin-dump"
+    const val PATH = "/Users/jisungbin/AndroidStudioProjects/ComposeMagic/app/kotlin-dump"
   }
 }
