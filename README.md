@@ -5,3 +5,5 @@
 - ir.kt
 
 uses maven-local.
+
+`./gradlew publishToMavenLocal`
