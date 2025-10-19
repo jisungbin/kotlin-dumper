@@ -10,7 +10,6 @@ import org.jetbrains.kotlin.compiler.plugin.ComponentRegistrar
 import org.jetbrains.kotlin.compiler.plugin.ExperimentalCompilerApi
 import org.jetbrains.kotlin.config.CompilerConfiguration
 import org.jetbrains.kotlin.config.messageCollector
-import org.jetbrains.kotlin.fir.extensions.FirExtensionRegistrarAdapter
 
 @OptIn(ExperimentalCompilerApi::class)
 class KotlinDumperPluginRegistrar : ComponentRegistrar {
@@ -34,6 +33,6 @@ class KotlinDumperPluginRegistrar : ComponentRegistrar {
   }
 
   companion object {
-    const val PATH = "/Users/jisungbin/AndroidStudioProjects/ComposeMagic/app/kotlin-dump"
+    const val PATH = "/Users/jisungbin/StudioProjects/2025-compose-wizard/app/kotlin-dump"
   }
 }
